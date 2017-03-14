@@ -2,17 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.vertical</groupId>
-    <artifactId>mm-parent</artifactId>
+    <artifactId>mm-manage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>com.vertical</groupId>
-  <artifactId>mm-manage</artifactId>
+  <artifactId>mm-manage-service</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <modules>
-  	<module>mm-manage-vo</module>
-  	<module>mm-manage-dao</module>
-  	<module>mm-manage-service</module>
-  	<module>mm-manage-web</module>
-  </modules>
 </project>
