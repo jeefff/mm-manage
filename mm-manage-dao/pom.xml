@@ -5,8 +5,60 @@
     <artifactId>mm-manage</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.vertical</groupId>
   <artifactId>mm-manage-dao</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
+  <dependencies>
+  	<dependency>
+  		<groupId>com.vertical</groupId>
+    <artifactId>mm-manage-vo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
+  	<!-- 配置mybatis的依赖 -->
+  			
+  		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${mybatis.spring.version}</version>
+		</dependency>	
+  		
+  		<dependency>
+		  <groupId>com.github.miemiedev</groupId>
+		  <artifactId>mybatis-paginator</artifactId>
+		  <version>1.2.15</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>${mybatis.pagehelper.version}</version>
+			<classifier>fix</classifier>
+		</dependency>
+  		
+  		<dependency>
+			<groupId>com.github.jsqlparser</groupId>
+			<artifactId>jsqlparser</artifactId>
+			<version>${jsqlparser.version}</version>
+		</dependency>
+  		
+  		<!-- END -->
+  		
+  </dependencies>
+  <!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.properties</include>
+					<include>**/*.xml</include>
+				</includes>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+	</build>
+  
 </project>
